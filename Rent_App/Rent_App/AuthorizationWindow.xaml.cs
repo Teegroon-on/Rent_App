@@ -24,5 +24,56 @@ namespace Rent_App
 		{
 			InitializeComponent();
 		}
+
+		private void EntryButClick(object sender, RoutedEventArgs e)
+		{
+			if (LoginTB.Text != "" && LoginTB.Text != " ")
+			{
+				var Context = new DataModel.RentContext();
+				DataModel.STAFF StaffLogin = Context.STAFF.FirstOrDefault(p => p.Email == LoginTB.Text);
+				if(StaffLogin.Email != null )
+				{
+					if(StaffLogin.Password == PassworB.Password)
+					{
+						switch(StaffLogin.Role_id)
+						{
+							case 2:
+								{
+									Menager_C MC = new Menager_C();
+									MC.Show();
+									this.Hide();
+									break;
+								}
+							default:
+								{
+									MessageBox.Show("Доступ ограничен, для получения доступа обратитесь к администратору системы.", ""
+													, MessageBoxButton.OK, MessageBoxImage.Information);
+									break;
+								}
+						}
+					}
+					else
+					{
+						MessageBox.Show("Неверный пароль пользователя.", ""
+							, MessageBoxButton.OK, MessageBoxImage.Information);
+					}
+				}
+				else
+				{
+					MessageBox.Show("Пользователя с таким Email нет в базе данных.", ""
+						, MessageBoxButton.OK, MessageBoxImage.Information);
+				}
+			}
+			else
+			{
+				MessageBox.Show("Введите Email.", ""
+					, MessageBoxButton.OK, MessageBoxImage.Information);
+			}
+		}
+
+		private void CancleButClick(object sender, RoutedEventArgs e)
+		{
+			Environment.Exit(0);
+		}
 	}
 }
