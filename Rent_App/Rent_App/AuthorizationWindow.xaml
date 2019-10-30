@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rent_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="630" ResizeMode="NoResize">
+	<Window.Background>
+		<SolidColorBrush Color="White"/>
+	</Window.Background>
     <Grid>
-        
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="70"/>
+			<ColumnDefinition Width="100"/>
+			<ColumnDefinition Width="100"/>
+			<ColumnDefinition Width="100"/>
+			<ColumnDefinition Width="30"/>
+		</Grid.ColumnDefinitions>
     </Grid>
 </Window>
