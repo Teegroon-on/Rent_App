@@ -18,12 +18,13 @@ namespace Rent_App
 	/// <summary>
 	/// Логика взаимодействия для MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class AuthorizationWindow : Window
 	{
 		int EntryCol = 0;
-		public MainWindow()
+		public AuthorizationWindow()
 		{
 			InitializeComponent();
+			App.WindowApp.Add(this);
 		}
 
 		private void EntryButClick(object sender, RoutedEventArgs e)
@@ -63,7 +64,7 @@ namespace Rent_App
 								{
 									case 2:
 										{
-											Menager_C MC = new Menager_C();
+											MenagerC MC = new MenagerC();
 											MC.Show();
 											this.Hide();
 											break;
@@ -122,7 +123,7 @@ namespace Rent_App
 							{
 								case 2:
 									{
-										Menager_C MC = new Menager_C();
+										MenagerC MC = new MenagerC();
 										MC.Show();
 										this.Hide();
 										break;

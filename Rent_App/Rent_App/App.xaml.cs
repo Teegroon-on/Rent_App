@@ -11,7 +11,10 @@ namespace Rent_App
 	/// <summary>
 	/// Логика взаимодействия для App.xaml
 	/// </summary>
+	/// 
+
 	public partial class App : Application
 	{
+		public static List<Window> WindowApp = new List<Window>();
 	}
 }

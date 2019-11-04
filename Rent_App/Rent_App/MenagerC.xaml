@@ -1,0 +1,93 @@
+﻿<Window x:Class="Rent_App.MenagerC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rent_App"
+        mc:Ignorable="d"
+        Title="Интерфейс менеджера C" Height="450" Width="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="20"/>
+			<RowDefinition Height="21"/>
+			<RowDefinition Height="20"/>
+			<RowDefinition Height="314"/>
+			<RowDefinition Height="15"/>
+		</Grid.RowDefinitions>
+		<Label Content="Интерфейс менеджера С" HorizontalAlignment="Center" VerticalAlignment="Center"
+			   FontFamily="Arial bold" FontSize="14" Grid.Row="0"/>
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="610"/>
+				<ColumnDefinition Width="80"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="80"/>
+				<ColumnDefinition Width="15"/>
+			</Grid.ColumnDefinitions>
+			<Button Name="BackBut" Content="Назад" 
+					FontFamily="Arial" FontSize="10" Background="#FFFF9C1A"
+					Grid.Column="1" Click="BackClick"/>
+			<Button Name="ExitBut" Content="Выход" 
+					FontFamily="Arial" FontSize="10" Background="#FFFF9C1A"
+					Grid.Column="3" Click="ExitClick"/>
+		</Grid>
+		<Grid Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="80"/>
+			</Grid.ColumnDefinitions>
+			<Label Content="Статус ТЦ:" FontFamily="Arial" FontSize="10"  Grid.Column="3"/>
+			<Label Content="Город:" FontFamily="Arial" FontSize="10" Grid.Column="7"/>
+		</Grid>
+		<Grid Grid.Row="3">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="120"/>
+				<ColumnDefinition Width="15"/>
+				<ColumnDefinition Width="80"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="80"/>
+				<ColumnDefinition Width="5"/>
+				<ColumnDefinition Width="80"/>
+			</Grid.ColumnDefinitions>
+			<CheckBox Name="StatusCheck" VerticalAlignment="Center" Grid.Column="1" />
+			<ComboBox Name="StatusCB" FontFamily="Arial" FontSize="10" Background="#FFFF9C1A"  Grid.Column="3"/>
+			<CheckBox Name="CityCheck" VerticalAlignment="Center" Grid.Column="5" />
+			<ComboBox Name="CityCB" FontFamily="Arial" FontSize="10" Background="#FFFF9C1A"  Grid.Column="7"/>
+			<Button Name="AddBut" FontFamily="Arial" FontSize="10" Background="#FFFF9C1A" Grid.Column="9"
+					Content="Добавить" Click="AddClick"/>
+			<Button Name="AddUpd" FontFamily="Arial" FontSize="10" Background="#FFFF9C1A" Grid.Column="11"
+					Content="Изменить" Click="UpdClick"/>
+			<Button Name="DelBut" FontFamily="Arial" FontSize="10" Background="#FFFF9C1A" Grid.Column="13"
+					Content="Удалить" Click="DelClick"/>
+		</Grid>
+		<DataGrid x:Name="ShopData" Grid.Row="4"
+				  Margin="15, 15, 15, 15">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Название ТЦ" Width="110"/>
+				<DataGridTextColumn Header="Статус" Width="100"/>
+				<DataGridTextColumn Header="Количество &#xa;павильнонов" Width="100"/>
+				<DataGridTextColumn Header="Город" Width="100"/>
+				<DataGridTextColumn Header="Стоимость &#xa;постройки ТЦ" Width="120"/>
+				<DataGridTextColumn Header="Этажность" Width="70"/>
+				<DataGridTextColumn Header="Коэффициент&#xa;добавочной стоимости" Width="150"/>
+			</DataGrid.Columns>
+		</DataGrid>
+
+	</Grid>
+</Window>
