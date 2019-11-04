@@ -17,9 +17,9 @@
 			<RowDefinition Height="5"/>
 			<RowDefinition Height="20"/>
 			<RowDefinition Height="15"/>
-			<RowDefinition Height="60"/>
-			<RowDefinition Height="5"/>
 			<RowDefinition Height="20"/>
+			<RowDefinition Height="5"/>
+			<RowDefinition Height="60"/>
 			<RowDefinition Height="15"/>
 			<RowDefinition Height="20"/>
 		</Grid.RowDefinitions>
@@ -46,22 +46,6 @@
 		</Grid>
 		<Grid Grid.Row="6">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="100"/>
-				<ColumnDefinition Width="200"/>
-				<ColumnDefinition Width="100"/>
-			</Grid.ColumnDefinitions>
-			<Image Name="CapchaImage" Visibility="Hidden"/>
-		</Grid>
-		<Grid Grid.Row="8">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="100"/>
-				<ColumnDefinition Width="200"/>
-				<ColumnDefinition Width="100"/>
-			</Grid.ColumnDefinitions>
-			<TextBox Name="CapchaTB" Visibility="Hidden"/>
-		</Grid>
-		<Grid Grid.Row="10">
-			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="117"/>
 				<ColumnDefinition Width="80"/>
 				<ColumnDefinition Width="5"/>
@@ -70,6 +54,33 @@
 			</Grid.ColumnDefinitions>
 			<Button Name="EntryBut" Content="Войти" FontFamily="Arial" FontSize="10" Grid.Column="1" Click="EntryButClick" Background="#FFFF9C1A"/>
 			<Button Name="CancleBut" Content="Отмена" FontFamily="Arial" FontSize="10" Grid.Column="3" Click="CancleButClick" Background="#FFFF9C1A"/>
+		</Grid>
+		<Grid Grid.Row="8">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="100"/>
+				<ColumnDefinition Width="200"/>
+				<ColumnDefinition Width="100"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Name="CapchaImage" HorizontalAlignment="Left"
+					 FontSize="28" Foreground="Red" FontStyle="Italic"
+					 
+					 FontWeight="Heavy" 
+					 VerticalAlignment="Top" Background="{x:Null}"
+					 FontStretch="UltraCondensed"
+					   Grid.Column="1">
+				<TextBlock.TextDecorations>
+					<TextDecoration Location="Strikethrough">
+					</TextDecoration>
+				</TextBlock.TextDecorations>
+			</TextBlock>
+		</Grid>
+		<Grid Grid.Row="10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="100"/>
+				<ColumnDefinition Width="200"/>
+				<ColumnDefinition Width="100"/>
+			</Grid.ColumnDefinitions>
+			<TextBox Name="CapchaTB" Visibility="Hidden" Grid.Column="1"/>
 		</Grid>
 	</Grid>
 </Window>
