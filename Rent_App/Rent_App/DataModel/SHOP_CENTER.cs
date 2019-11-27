@@ -11,7 +11,7 @@ namespace Rent_App.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SHOP_CENTER()
         {
-            PAVILION = new HashSet<PAVILION>();
+            PAVILIONs = new HashSet<PAVILION>();
         }
 
         [Key]
@@ -35,7 +35,7 @@ namespace Rent_App.DataModel
         public virtual CITY CITY { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PAVILION> PAVILION { get; set; }
+        public virtual ICollection<PAVILION> PAVILIONs { get; set; }
 
         public virtual STATUS_SC STATUS_SC { get; set; }
     }

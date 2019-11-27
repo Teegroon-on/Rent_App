@@ -47,7 +47,7 @@ namespace Rent_App
 						try
 						{
 							var Context = new DataModel.RentContext();
-							StaffLogin = Context.STAFF.FirstOrDefault(p => p.Email == LoginTB.Text.ToLower());
+							StaffLogin = Context.STAFFs.FirstOrDefault(p => p.Email == LoginTB.Text.ToLower());
 						}
 						catch (Exception ex)
 						{
@@ -106,7 +106,7 @@ namespace Rent_App
 					try
 					{
 						var Context = new DataModel.RentContext();
-						StaffLogin = Context.STAFF.FirstOrDefault(p => p.Email == LoginTB.Text);
+						StaffLogin = Context.STAFFs.FirstOrDefault(p => p.Email == LoginTB.Text);
 					}
 					catch (Exception ex)
 					{

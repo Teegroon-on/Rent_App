@@ -12,7 +12,7 @@ namespace Rent_App.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PAVILION()
         {
-            RENT = new HashSet<RENT>();
+            RENTs = new HashSet<RENT>();
         }
 
         public int ID { get; set; }
@@ -40,6 +40,6 @@ namespace Rent_App.DataModel
         public virtual STATUS_PAVILION STATUS_PAVILION { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RENT> RENT { get; set; }
+        public virtual ICollection<RENT> RENTs { get; set; }
     }
 }

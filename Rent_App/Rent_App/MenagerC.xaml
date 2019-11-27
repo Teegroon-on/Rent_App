@@ -77,15 +77,15 @@
 					Content="Удалить" Click="DelClick"/>
 		</Grid>
 		<DataGrid x:Name="ShopData" Grid.Row="4"
-				  Margin="15, 15, 15, 15">
+				  Margin="15, 15, 15, 15" DataContext="{Binding Source = DataContext}">
 			<DataGrid.Columns>
-				<DataGridTextColumn Header="Название ТЦ" Width="110"/>
-				<DataGridTextColumn Header="Статус" Width="100"/>
-				<DataGridTextColumn Header="Количество &#xa;павильнонов" Width="100"/>
-				<DataGridTextColumn Header="Город" Width="100"/>
-				<DataGridTextColumn Header="Стоимость &#xa;постройки ТЦ" Width="120"/>
-				<DataGridTextColumn Header="Этажность" Width="70"/>
-				<DataGridTextColumn Header="Коэффициент&#xa;добавочной стоимости" Width="150"/>
+				<DataGridTextColumn Header="Название ТЦ" Binding="{Binding Path = Name}" Width="110"/>
+				<DataGridTextColumn Header="Статус" Binding="{Binding Path = StatusSC}" Width="100"/>
+				<DataGridTextColumn Header="Количество &#xa;павильнонов" Binding="{Binding Path = PavilionCol}" Width="100"/>
+				<DataGridTextColumn Header="Город" Binding="{Binding Path = CitySC}" Width="100"/>
+				<DataGridTextColumn Header="Стоимость &#xa;постройки ТЦ" Binding="{Binding Path = CostBuild}" Width="120"/>
+				<DataGridTextColumn Header="Этажность" Binding="{Binding Path = FloorCol}" Width="70"/>
+				<DataGridTextColumn Header="Коэффициент&#xa;добавочной стоимости" Binding="{Binding Path = Coff}" Width="150"/>
 			</DataGrid.Columns>
 		</DataGrid>
 

@@ -11,7 +11,7 @@ namespace Rent_App.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public STATUS_PAVILION()
         {
-            PAVILION = new HashSet<PAVILION>();
+            PAVILIONs = new HashSet<PAVILION>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -22,6 +22,6 @@ namespace Rent_App.DataModel
         public string Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PAVILION> PAVILION { get; set; }
+        public virtual ICollection<PAVILION> PAVILIONs { get; set; }
     }
 }

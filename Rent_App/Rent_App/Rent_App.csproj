@@ -68,15 +68,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModel\ShopCenterViewModel.cs" />
-    <Page Include="AuthorizationWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="DataModel\CITY.cs" />
     <Compile Include="DataModel\RentContext.cs" />
     <Compile Include="DataModel\PAVILION.cs" />
@@ -88,7 +79,17 @@
     <Compile Include="DataModel\STATUS_PAVILION.cs" />
     <Compile Include="DataModel\STATUS_RENT.cs" />
     <Compile Include="DataModel\STATUS_SC.cs" />
-    <Compile Include="DataModel\sysdiagrams.cs" />
+    <Compile Include="DataModel\sysdiagram.cs" />
+    <Compile Include="DataModel\V_SHOP_CENTER.cs" />
+    <Compile Include="ViewModel\ViewModelShopCenter.cs" />
+    <Page Include="AuthorizationWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -131,6 +132,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

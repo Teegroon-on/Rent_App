@@ -12,7 +12,7 @@ namespace Rent_App.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ROLE()
         {
-            STAFF = new HashSet<STAFF>();
+            STAFFs = new HashSet<STAFF>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -24,6 +24,6 @@ namespace Rent_App.DataModel
         public string Role1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<STAFF> STAFF { get; set; }
+        public virtual ICollection<STAFF> STAFFs { get; set; }
     }
 }

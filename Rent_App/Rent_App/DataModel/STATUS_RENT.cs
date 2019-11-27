@@ -11,7 +11,7 @@ namespace Rent_App.DataModel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public STATUS_RENT()
         {
-            RENT = new HashSet<RENT>();
+            RENTs = new HashSet<RENT>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -22,6 +22,6 @@ namespace Rent_App.DataModel
         public string Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<RENT> RENT { get; set; }
+        public virtual ICollection<RENT> RENTs { get; set; }
     }
 }
